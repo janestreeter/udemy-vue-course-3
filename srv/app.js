@@ -1,28 +1,25 @@
-Vue.createApp({
+const vueOptions = {
   data() {
-      return {
-        goals: [],
-        enteredValue: ''
-      };
+    return {
+      goals: [],
+      enteredValue: "",
+    };
   },
   methods: {
+    outPutGoal() {
+      const randomNumba = Math.random();
+      if (randomNumba < 0.5) {
+        return "pinky Pie";
+      } else if (randomNumba > 0.6) {
+        return "apple jack";
+      } else {
+        return "flutter shy";
+      }
+    },
     addGoal() {
       this.goals.push(this.enteredValue);
-      this.enteredValue = '';
-    }
-  }
-}).mount('#app');
-
-// const buttonEl = document.querySelector('button');
-// const inputEl = document.querySelector('input');
-// const listEl = document.querySelector('ul');
-
-// function addGoal() {
-//     const enteredValue = inputEl.value;
-//     const listItemEl = document.createElement('li');
-//     listItemEl.textContent = enteredValue;
-//     listEl.appendChild(listItemEl);
-//     inputEl.value = '';
-// }   
-
-// buttonEl.addEventListener('click', addGoal);
+      this.enteredValue = "";
+    },
+  },
+};
+Vue.createApp(vueOptions).mount("#swag");
