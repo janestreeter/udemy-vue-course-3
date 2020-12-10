@@ -1,4 +1,8 @@
 Vue.createApp({
   data() {},
-  methods: {},
+  methods: {
+    clickHandler() {
+      window.alert("Impressive!");
+    },
+  },
 }).mount("#assignment");
