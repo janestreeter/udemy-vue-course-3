@@ -26,8 +26,8 @@
       <p>{{click}}</p>
       <hr />
       <!-- 3) Repeat 2) but only output the entered value if the ENTER key was pressed -->
-      <input type="text" />
-      <p>OUTPUT</p>
+      <input v-on:keydown.enter="keydownHandler2" type="text" />
+      <p>{{clicker}}</p>
     </section>
   </body>
 </html>
