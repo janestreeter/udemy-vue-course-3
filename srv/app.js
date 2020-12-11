@@ -1,21 +1,22 @@
-Vue.createApp({
+const app = Vue.createApp({
   data() {
     return {
-      click: "",
-      clicker: "",
+      counter: 0,
+      name: ''
     };
   },
   methods: {
-    clickHandler() {
-      window.alert("Impressive!");
+    setName(event, lastName) {
+      this.name = event.target.value + ' ' + lastName;
     },
-    keydownHandler(evt) {
-      const updatedValue = evt.target.value;
-      this.click = updatedValue;
+    add(num) {
+      this.counter = this.counter + num;
     },
-    keydownHandler2(evt) {
-      const updatedValue = evt.target.value;
-      this.clicker = updatedValue;
-    },
-  },
-}).mount("#assignment");
+    reduce(num) {
+      this.counter = this.counter - num;
+      // this.counter--;
+    }
+  }
+});
+
+app.mount('#events');
