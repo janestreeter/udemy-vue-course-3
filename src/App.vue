@@ -1,18 +1,28 @@
 <template>
-  <the-header title="RememberMe"></the-header>
-  <the-resources></the-resources>
+  <the-form></the-form>
 </template>
 
 <script>
-import TheHeader from "./components/layouts/TheHeader.vue";
-import TheResources from "./components/learning-resources/TheResource.vue";
+import TheForm from './components/TheForm.vue';
 
 export default {
   components: {
-    TheHeader,
-    TheResources,
-  },
-};
+    TheForm
+  }  
+}
 </script>
 
-<style></style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #292929;
+}
+</style>
